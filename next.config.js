@@ -6,13 +6,17 @@ const {
 const getBuildConfig = (...args) => {
   const path = require('path')
   const withPugins = require('next-compose-plugins')
-  const withSCSS = require('@zeit/next-sass')
+  const withSCSS = require('@zeit/next-css')
   const postcssPresetEnv = require('postcss-preset-env')
   const postcssPresetEnvOptions = {
-    features: {
-      'custom-media-queries': true,
-      'custom-selectors': true,
-    },
+    // importFrom: {
+    //   customProperties: {
+    //     '--primary': '#f0c0c0',
+    //   },
+    importFrom: './src/theme/in.css',
+    preserve: true,
+    browsers: ['last 2 versions', 'ie >= 11'],
+    stage: 1,
   }
 
   const cssOptions = {
@@ -47,9 +51,7 @@ const getBuildConfig = (...args) => {
       return config
     },
   }
-  return withPugins([[withSCSS, cssOptions]], nextConfig)(
-    ...args
-  )
+  return withPugins([[withSCSS, cssOptions]], nextConfig)(...args)
 }
 
 module.exports = (phase, ...rest) => {

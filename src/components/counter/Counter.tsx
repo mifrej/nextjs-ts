@@ -1,3 +1,4 @@
+import './base.css';
 import Icon from '@components/icon/Icon'
 
 interface CounterProps {
