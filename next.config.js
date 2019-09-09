@@ -4,17 +4,14 @@ const {
 } = require('next/constants')
 
 const getBuildConfig = (...args) => {
-  const path = require('path')
+  // const path = require('path')
   const withPugins = require('next-compose-plugins')
-  const withSCSS = require('@zeit/next-css')
+  const withCSS = require('@zeit/next-css')
   const postcssPresetEnv = require('postcss-preset-env')
   const postcssPresetEnvOptions = {
-    // importFrom: {
-    //   customProperties: {
-    //     '--primary': '#f0c0c0',
-    //   },
-    importFrom: './src/theme/in.css',
-    preserve: true,
+    importFrom: './src/theme/in.js',
+    preserve: false,
+    // exportTo: './src/theme/out.css',
     browsers: ['last 2 versions', 'ie >= 11'],
     stage: 1,
   }
@@ -23,35 +20,36 @@ const getBuildConfig = (...args) => {
     postcssLoaderOptions: {
       plugins: [postcssPresetEnv(postcssPresetEnvOptions)],
     },
-    sassLoaderOptions: {
-      includePaths: [path.join(process.cwd(), 'src', 'common', 'css')],
-    },
+    // sassLoaderOptions: {
+    //   includePaths: [path.join(process.cwd(), 'src', 'common', 'css')],
+    // },
   }
 
   const nextConfig = {
-    webpack(config) {
-      config.module.rules.push({
-        test: /\.svg$/,
-        include: /src\/components\/icon\/icons/,
-        use: [
-          'svg-sprite-loader',
-          {
-            loader: 'svgo-loader',
-            options: {
-              plugins: [
-                { removeAttrs: { attrs: '(fill)' } },
-                { removeTitle: true },
-                { cleanupIDs: true },
-                { removeStyleElement: true },
-              ],
-            },
-          },
-        ],
-      })
-      return config
-    },
+    // webpack(config) {
+    //   config.module.rules.push({
+    //     test: /\.svg$/,
+    //     include: /src\/components\/icon\/icons/,
+    //     use: [
+    //       'svg-sprite-loader',
+    //       {
+    //         loader: 'svgo-loader',
+    //         options: {
+    //           plugins: [
+    //             { removeAttrs: { attrs: '(fill)' } },
+    //             { removeTitle: true },
+    //             { cleanupIDs: true },
+    //             { removeStyleElement: true },
+    //           ],
+    //         },
+    //       },
+    //     ],
+    //   })
+    //   return config
+    // },
   }
-  return withPugins([[withSCSS, cssOptions]], nextConfig)(...args)
+
+  return withPugins([[withCSS, cssOptions]], nextConfig)(...args)
 }
 
 module.exports = (phase, ...rest) => {
