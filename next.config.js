@@ -5,7 +5,7 @@ const {
 
 const getBuildConfig = (...args) => {
   // const path = require('path')
-  const withPugins = require('next-compose-plugins')
+  const withPlugins = require('next-compose-plugins')
   const withCSS = require('@zeit/next-css')
   const postcssPresetEnv = require('postcss-preset-env')
   const postcssPresetEnvOptions = {
@@ -49,7 +49,7 @@ const getBuildConfig = (...args) => {
     // },
   }
 
-  return withPugins([[withCSS, cssOptions]], nextConfig)(...args)
+  return withPlugins([[withCSS, cssOptions]], nextConfig)(...args)
 }
 
 module.exports = (phase, ...rest) => {
