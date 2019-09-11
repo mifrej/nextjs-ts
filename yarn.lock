@@ -6508,10 +6508,10 @@ neo-async@^2.5.0, neo-async@^2.6.0, neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
-next-compose-plugins@^2.1.1:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
-  integrity sha512-ChUlpT9tWfJ7YxqGw/WQ2T1gf8EeX93n1XqeQw0lkvGa7seszahvF4eOZUJoq7Hetsbzg4UHVnPoCXfXTyQR3g==
+next-compose-plugins@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.1.1.tgz#7da0a3ce0c8ce267b5cb4164d2fb6e4aaf61bf86"
+  integrity sha512-4yLtmGjnBlzuYdL66+c/zi8ljl24sK9jtP31UsTG1ZAAHj+ybWfEG/S+HMwK+pD2fNmJ4xQyr4xOubzExcS+Lg==
 
 next-redux-wrapper@^3.0.0:
   version "3.0.0"
@@ -6538,7 +6538,7 @@ next-server@9.0.5:
     styled-jsx "3.2.1"
     url "0.11.0"
 
-next@^9.0.5:
+next@9.0.5:
   version "9.0.5"
   resolved "https://registry.yarnpkg.com/next/-/next-9.0.5.tgz#854db5c485d81857f69eb3cfd076fc1bd8ef7fc3"
   integrity sha512-DpG6SSzZkREPW6pZhuJOXzR6XY5XOfFOiwVBhOXzmlSifJviHpmkGRsMlJxP3WejfKH/Gzhjs2Ar+//EGRQtGA==
@@ -8173,15 +8173,15 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.8.2:
-  version "16.9.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
-  integrity sha512-YFT2rxO9hM70ewk9jq0y6sQk8cL02xm4+IzYBz75CQGlClQQ1Bxq0nhHF6OtSbit+AIahujJgb/CPRibFkMNJQ==
+react-dom@16.8.2:
+  version "16.8.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.2.tgz#7c8a69545dd554d45d66442230ba04a6a0a3c3d3"
+  integrity sha512-cPGfgFfwi+VCZjk73buu14pYkYBR1b/SRMSYqkLDdhSEHnSwcuYTPu6/Bh6ZphJFIk80XLvbSe2azfcRzNF+Xg==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.15.0"
+    scheduler "^0.13.2"
 
 react-error-overlay@5.1.6:
   version "5.1.6"
@@ -8220,14 +8220,15 @@ react-test-renderer@^16.0.0-0:
     react-is "^16.9.0"
     scheduler "^0.15.0"
 
-react@^16.8.2:
-  version "16.9.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
-  integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==
+react@16.8.2:
+  version "16.8.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.8.2.tgz#83064596feaa98d9c2857c4deae1848b542c9c0c"
+  integrity sha512-aB2ctx9uQ9vo09HVknqv3DGRpI7OIGJhCx3Bt0QqoRluEjHSaObJl+nG12GDdYH6sTgE7YiPJ6ZUyMx9kICdXw==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
+    scheduler "^0.13.2"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -8803,6 +8804,14 @@ sax@^1.2.4, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
+
+scheduler@^0.13.2:
+  version "0.13.6"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.6.tgz#466a4ec332467b31a91b9bf74e5347072e4cd889"
+  integrity sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 scheduler@^0.15.0:
   version "0.15.0"
@@ -9517,16 +9526,16 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
-svg-baker-runtime@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/svg-baker-runtime/-/svg-baker-runtime-1.4.1.tgz#d3f77dffdf1f1a8b8f1e84ef67d2c1b53d60d770"
-  integrity sha512-4HLs8dU5kP4+zWix3MoZUge7kSVO6VCg14dLJWVIRWZx1vik21k/h5T620VXRoIyn0nw8g1R8Qk+VvW9BLOOPA==
+svg-baker-runtime@^1.4.0:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/svg-baker-runtime/-/svg-baker-runtime-1.4.3.tgz#8ec035daf3af4abe7e788120868ebbf84a34468f"
+  integrity sha512-QY6RlJN3v6xPxVQboSrsGiLWaWay+uFstic6QEzoIUK2l6M/lqL/wiqFcoqroBsGpqpP0knXplltLZGTzncbNw==
   dependencies:
     deepmerge "1.3.2"
     mitt "1.1.2"
-    svg-baker "^1.4.0"
+    svg-baker "^1.5.0"
 
-svg-baker@^1.4.0, svg-baker@^1.4.1:
+svg-baker@^1.4.0, svg-baker@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/svg-baker/-/svg-baker-1.5.0.tgz#e94e75523d9303e9a2b3448987080d966cb90af4"
   integrity sha512-UMU4WQMfsmY1l8eqoxBoGTDht02RVu46cC0QoAVsJM6lUvbGCkPnAHHMG3mM8m/D1zAGg8Q0IZXnHokZ9umX0Q==
@@ -9545,10 +9554,10 @@ svg-baker@^1.4.0, svg-baker@^1.4.1:
     query-string "^4.3.2"
     traverse "^0.6.6"
 
-svg-sprite-loader@^4.1.3:
-  version "4.1.6"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-4.1.6.tgz#ca03d51201e326c1c018389c81d5b0eb78dc01de"
-  integrity sha512-fVLDJ36GUfLmeZEB+RFq/OmiEThifZsQQ+8YSmbpOtyvlkLBbnGydYG6IHJehgbpy58898JyoHk+krd6C+6dXg==
+svg-sprite-loader@4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-4.1.3.tgz#d25cfa75a5c4e499f7b5282281db6eb3bda13fe0"
+  integrity sha512-lOLDSJoyriYnOeGYc7nhxTDYj2vfdBVKpxIS/XK70//kA3VB55H89T1lct2OEClY4w5kQLZJAvDGQ41g3YTogQ==
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
@@ -9556,8 +9565,8 @@ svg-sprite-loader@^4.1.3:
     escape-string-regexp "1.0.5"
     html-webpack-plugin "^3.2.0"
     loader-utils "^1.1.0"
-    svg-baker "^1.4.1"
-    svg-baker-runtime "1.4.1"
+    svg-baker "^1.4.0"
+    svg-baker-runtime "^1.4.0"
     url-slug "2.0.0"
 
 svg-tags@^1.0.0:
